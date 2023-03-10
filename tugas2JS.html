@@ -1,0 +1,34 @@
+<script>
+    let nmpegawai = "marchell";
+    let jabatan = "manager";
+    let status = "menikah";
+    
+    let gaji = 0;
+    switch(jabatan){
+       case 'manager' : gaji = 10000000; break;
+       case 'asisten manager' : gaji = 8000000; break;
+       case 'staff' : gaji = 5000000; break;
+       default: gaji = 0;
+    }
+    let tunjanganjbt = 0;
+    tunjanganjbt =  0.1 * gaji;
+    let bpjs =0;
+    bpjs = 0.1 * gaji;
+    
+    let tunjangankel = 0;
+    if(status == 'menikah') tunjangankel = 0.1 * gaji;
+    else tunjangankel = 0;
+
+    let total = gaji + tunjanganjbt + tunjangankel + bpjs;
+
+    document.write("nama pegawai : " +nmpegawai+
+    "<br> jabatan : " + jabatan+
+    "<br> status : " + status+
+    "<br> gaji pokok : "+gaji+
+    "<br> tunjangan jabatan : " +tunjanganjbt+
+    "<br> bpjs : " + bpjs+
+    "<br> tunjangan keluarga : " + tunjangankel+
+    "<br> total gaji keseluruhan : "+ total);
+
+
+</script>
